@@ -1,115 +1,252 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Horizon</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background: #111;
-    color: #fff;
-    margin: 0;
-    padding: 0;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HORIZON Headwear</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .hero-image {
+            width: 100vw;
+            height: 50vh;
+            min-height: 300px;
+            max-height: 600px;
+            background-color: #1a1a1a;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #333;
+        }
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .section {
+            margin-bottom: 50px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #e0e0e0;
+        }
+        .highlight {
+            font-weight: 700;
+            color: #ffffff;
+        }
+        .content-image-container {
+            margin: 40px 0;
+            display: flex;
+            justify-content: center;
+        }
+        .content-image {
+            width: 50%;
+            min-width: 280px;
+            height: 350px;
+            background-color: #1a1a1a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: 1px solid #333;
+        }
+        .content-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        a.text-link {
+            color: #ffffff;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+        a.text-link:hover {
+            color: #cccccc;
+        }
+        .contact-info {
+            margin-top: 40px;
+            font-size: 1.05rem;
+        }
+        
+        /* Newsletter Section */
+        .newsletter {
+            background-color: #111111;
+            border: 1px solid #333;
+            padding: 40px 30px;
+            margin-top: 60px;
+            text-align: center;
+        }
+        .newsletter h2 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .newsletter form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .newsletter input[type="email"] {
+            width: 100%;
+            padding: 14px 16px;
+            background-color: #000000;
+            border: 1px solid #444;
+            color: #ffffff;
+            font-size: 1rem;
+            outline: none;
+        }
+        .newsletter input[type="email"]::placeholder {
+            color: #888;
+        }
+        .newsletter input[type="email"]:focus {
+            border-color: #ffffff;
+        }
+        .newsletter button[type="submit"] {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 14px 32px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.2s, color 0.2s;
+        }
+        .newsletter button[type="submit"]:hover {
+            background-color: #cccccc;
+        }
 
-  .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 80px 20px;
-    text-align: center;
-  }
-
-  .hero {
-  width: 40vw;
-  max-width: 320px;
-  min-width: 200px;
-  border-radius: 6px;
-  margin-bottom: 15px;
-  }
-
-h1 {
-  font-size: 3rem;
-  letter-spacing: 3px;
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-
-  .tagline {
-    font-size: 1.2rem;
-    opacity: 0.8;
-    margin-bottom: 30px;
-  }
-
-  .text {
-    font-size: 1rem;
-    line-height: 1.6;
-    opacity: 0.85;
-  }
-.newsletter {
-  margin-top: 30px;
-  text-align: center;
-}
-
-.newsletter h2 {
-  font-size: 1.3rem;
-  margin-bottom: 15px;
-  letter-spacing: 1px;
-  color: #fff;
-}
-
-.newsletter input[type="email"] {
-  padding: 10px;
-  width: 250px;
-  max-width: 90%;
-  border-radius: 4px;
-  border: none;
-  margin-right: 10px;
-}
-
-.newsletter button {
-  padding: 10px 20px;
-  border-radius: 4px;
-  border: none;
-  background-color: #ff6600;
-  color: #fff;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.newsletter button:hover {
-  background-color: #e55a00;
-}
-
-</style>
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #1a1a1a;
+            margin-top: 60px;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.4rem;
+            }
+            .container {
+                padding: 40px 20px;
+            }
+            .content-image {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <img src="hero.png" alt="Horizon Caps" class="hero">
 
-    <h1>HORIZON</h1>
-    <p class="tagline">Snapback Caps - Coming Soon!</p>
+    <!-- Foto1: Über die komplette Breite der Ansicht -->
+    <div class="hero-image">
+        <img src="Foto1.png" alt="Foto1">
+    </div>
 
-<p class="text">
-  Feedback, Ideen oder einfach ein paar Worte?<br>
-  Schreibe uns gerne an:<br> 
-  info@horizon-headwear.de<br>
-  Wir lesen jede Nachricht. 
-</p>
+    <div class="container">
+        
+        <div class="section">
+            <h1>Welcome to Horizon Headwear.</h1>
+            <p>Cool, dass du hier vorbeischaust!</p>
+            <p>Wir von <span class="highlight">HORIZON Headwear</span> machen Snapback Caps.</p>
+            <p>Warum? Weil wir sie lieben. Vor allem dann, wenn sie richtig gut sitzen.</p>
+        </div>
 
-<p class="text">
-  Trage dich in den Newsletter ein, wenn du als Erster über neue Modelle informiert werden willst.
-</p>
+        <div class="section">
+            <h2>Most Caps don't really fit.</h2>
+            <p>Zu hoch. Zu steif. Drücken. Stehen seitlich ab.</p>
+            <p>Wirken irgendwie überdimensioniert. Kennst du das?</p>
+        </div>
 
-<div class="newsletter">
-  <h2>Newsletter abonnieren</h2>
-  <form action="https://script.google.com/macros/s/AKfycbyijGIEio7xHRyqOh1Asy5MCd8Hkp4skQGksAR-_hNnn--zluDetGkCYl4STwc4SkX1/exec" method="post" target="_blank">
-    <input type="email" name="email" placeholder="Deine E-Mail" required>
-    <button type="submit">Abonnieren</button>
-  </form>
-</div>
-  
-    
+        <div class="section">
+            <h2>We fixed that.</h2>
+            <p>Wir haben den Schnitt der Snapback Cap überdacht – ausgemessen, getüftelt, rumprobiert, angepasst, anprobiert – und jetzt sitzt sie genau richtig.</p>
+        </div>
+
+        <div class="section">
+            <h2>Slim cut for a better fit.</h2>
+            <p>Bei uns bekommst du eine Cap, die etwas <span class="highlight">schmäler geschnitten</span> ist als herkömmliche Snapbacks. Eine Cap, die <span class="highlight">bequem am Kopf anliegt</span>, die einfach passt – und dabei extrem gut aussieht.</p>
+            <p>Wir lieben cleane, lässige Designs und harmonische Farbkombis.</p>
+            <p>Für alle, die einfach nur gut aussehen wollen, ohne unnötig aufzufallen.</p>
+            <p><span class="highlight">Hochwertige Materialien</span> und eine gute Verarbeitung sind für uns keine Frage, sondern vollkommen klar. Denn wir wollen dir eine langlebige und strapazierfähige Cap bieten, die dich lange begleiten kann.</p>
+        </div>
+
+        <!-- Foto2: Ca. 50% der Breite der Ansicht (Zwischen Neugierig-Text und Kontakt) -->
+        <div class="content-image-container">
+            <div class="content-image">
+                <img src="Foto2.png" alt="Foto2">
+            </div>
+        </div>
+
+        <div class="contact-info">
+            <p>Feedback, Ideen oder einfach ein paar Worte?<br>Schreibe uns gerne an: <a href="mailto:info@horizon-headwear.de" class="text-link">info@horizon-headwear.de</a></p>
+        </div>
+
+        <div class="newsletter">
+            <h2>Newsletter abonnieren</h2>
+            <form action="https://script.google.com/macros/s/AKfycbyijGIEio7xHRyqOh1Asy5MCd8Hkp4skQGksAR-_hNnn--zluDetGkCYl4STwc4SkX1/exec" method="post" target="_blank">
+                <input type="email" name="email" placeholder="Deine E-Mail" required>
+                <button type="submit">Abonnieren</button>
+            </form>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 HORIZON Headwear. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
