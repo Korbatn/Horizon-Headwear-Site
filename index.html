@@ -72,13 +72,13 @@ HTML
             color: #cccccc;
         }
         .content-image-container {
-            margin: 40px 0;
+            margin: 50px 0;
             display: flex;
             justify-content: center;
         }
         .content-image {
-            width: 50%;
-            min-width: 280px;
+            width: 100%;
+            max-width: 800px; /* Passt sich exakt an die Textbreite an */
             background-color: #000000;
             display: flex;
             align-items: center;
@@ -168,9 +168,6 @@ HTML
             .container {
                 padding: 40px 20px;
             }
-            .content-image {
-                width: 100%;
-            }
         }
     </style>
 </head>
@@ -203,7 +200,7 @@ HTML
             <p>Neugierig geworden? Dann schau dir unsere Modelle auf <a href="https://www.amazon.de" target="_blank" class="text-link">Amazon.de</a> an.</p>
         </div>
 
-        <!-- Foto2: Ca. 50% der Breite der Ansicht, zentriert -->
+        <!-- Foto2: So breit wie das Textfeld / die Newsletterbox, zentriert -->
         <div class="content-image-container">
             <div class="content-image">
                 <img src="Foto2.png" alt="Foto2">
